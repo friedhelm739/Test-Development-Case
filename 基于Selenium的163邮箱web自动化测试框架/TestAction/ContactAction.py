@@ -65,7 +65,7 @@ if __name__ == "__main__":
     
     time.sleep(1)
     CA = ContactAction(driver)
-    CA.add_contact("姚文轩", "2622872048@qq.com", True, "15566228517", "这是一个测试")
+    CA.add_contact("xxx", "xxx", True, "xxx", "xxx")
 
     time.sleep(10)
     driver.close()

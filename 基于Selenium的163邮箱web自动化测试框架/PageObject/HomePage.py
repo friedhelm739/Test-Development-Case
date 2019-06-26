@@ -45,10 +45,10 @@ if __name__ == "__main__":
     from TestAction.LoginAction import LoginAction
     driver = webdriver.Chrome()
     driver.get("https://email.163.com")
-    Log = LoginAction()
+    Log = LoginAction(driver)
 
     time.sleep(3)
-    Log.login(driver, Username=logintest["username"], Password=logintest["password"])
+    Log.login(Username=logintest["username"], Password=logintest["password"])
 
     time.sleep(5)
     HP = HomePage(driver)

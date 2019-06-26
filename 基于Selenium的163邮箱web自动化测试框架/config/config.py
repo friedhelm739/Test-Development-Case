@@ -9,18 +9,18 @@ PageElementLocatorPath = os.path.join(BASE_DIR,"config/PageElementLocator.ini")
 MaxTimeToResponse = 30
 
 # Login Test
-logintest = {"username":"friedhelm739", "password":"ywx_xsqq39"}
+logintest = {"username":"XXX", "password":"XXX"}
 
 # Log File
 logfileBaseDir = os.path.join(BASE_DIR,"Data")
 
-LoginExcelDir = r"E:\缓存文件\VScode\163test\Data\163账号.xlsx"
-ContactExcelDir = r"E:\缓存文件\VScode\163test\Data\联系人.xlsx"
+LoginExcelDir = r"E:\缓存文件\VScode\基于Selenium的163邮箱web自动化测试框架\Data\163账号.xlsx"
+ContactExcelDir = r"E:\缓存文件\VScode\基于Selenium的163邮箱web自动化测试框架\Data\联系人.xlsx"
 
-LoginTestExcelDir = r'E:\缓存文件\VScode\163test\Data\LoginTest.xls'
-WriteLetterTestExcelDir = r'E:\缓存文件\VScode\163test\Data\WriteLetterTest.xls'
+LoginTestExcelDir = r'E:\缓存文件\VScode\基于Selenium的163邮箱web自动化测试框架\Data\LoginTest.xls'
+WriteLetterTestExcelDir = r'E:\缓存文件\VScode\基于Selenium的163邮箱web自动化测试框架\Data\WriteLetterTest.xls'
 
-HTMLlogDir = r'E:\缓存文件\VScode\163test\Data\report.html'
+HTMLlogDir = r'E:\缓存文件\VScode\基于Selenium的163邮箱web自动化测试框架\Data\report.html'
 
 # 为方便扩展可将header名改为别名
 ContactSheetFormat = {  "ContactName":1, 

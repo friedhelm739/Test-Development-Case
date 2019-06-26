@@ -42,6 +42,6 @@ if __name__ == "__main__":
     driver.get("https://email.163.com")
     Log = LoginAction(driver)
     time.sleep(1)
-    # Log.login(Username=logintest["username"], Password=logintest["password"])
+    Log.login(Username=logintest["username"], Password=logintest["password"])
     time.sleep(10)
     driver.close()

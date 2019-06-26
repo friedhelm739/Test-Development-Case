@@ -96,10 +96,10 @@ if __name__ == "__main__":
     from HomePage import HomePage
     driver = webdriver.Chrome()
     driver.get("https://email.163.com")
-    Log = LoginAction()
+    Log = LoginAction(driver)
 
     time.sleep(1)
-    Log.login(driver, Username=logintest["username"], Password=logintest["password"])
+    Log.login(Username=logintest["username"], Password=logintest["password"])
 
     time.sleep(5)
     HP = HomePage(driver)
@@ -109,10 +109,10 @@ if __name__ == "__main__":
     CP = ContactPage(driver)
 
     CP.addNewContactObj().click()
-    CP.ContactNewNameObj().send_keys("姚文轩") 
-    CP.ContactNewEmailObj().send_keys("2622872048@qq.com") 
+    CP.ContactNewNameObj().send_keys("XX") 
+    CP.ContactNewEmailObj().send_keys("XXX") 
     CP.ContactNewStarObj().click()
-    CP.ContactNewPhoneObj().send_keys("1556622817") 
+    CP.ContactNewPhoneObj().send_keys("XXX") 
     CP.ContactNewCommetObj().send_keys("这是一次测试") 
     CP.ContactToSaveObj().click()
 

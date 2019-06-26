@@ -23,8 +23,9 @@ class LoginPage(object):
     def SwitchToSelectFrame(self):
         
         try:
-            _, locateValue = self.locator_dict["loginPage.frame".lower()].split(">")
-            self.driver.switch_to.frame(int(locateValue))
+            locateType, locateValue = self.locator_dict["loginPage.frame".lower()].split(">")
+            element_obj = get_element(self.driver, locateType= locateType, locateValue= locateValue)
+            self.driver.switch_to.frame(element_obj)
         except Exception as error:
             raise error
 
