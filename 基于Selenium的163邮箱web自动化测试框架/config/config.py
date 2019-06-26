@@ -9,7 +9,7 @@ PageElementLocatorPath = os.path.join(BASE_DIR,"config/PageElementLocator.ini")
 MaxTimeToResponse = 30
 
 # Login Test
-logintest = {"username":"friedhelm739", "password":"ywx_xsqq39"}
+logintest = {"username":"XXX", "password":"XXX"}
 
 # Log File
 logfileBaseDir = os.path.join(BASE_DIR,"Data")
