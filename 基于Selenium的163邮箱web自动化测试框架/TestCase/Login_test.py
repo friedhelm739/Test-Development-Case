@@ -11,6 +11,7 @@ import ddt
 import datetime
 
 from TestAction.LoginAction import LoginAction
+from PageObject.LoginPage import LoginPage
 from utils.DealExcelFile import DealExcelFile
 from utils.Log import Log
 from utils.ObjectMap import get_element
@@ -58,6 +59,7 @@ class Login_test(unittest.TestCase):
         self.logger.info("使用%s账号"%(Account["账号"])) 
 
         LA = LoginAction(self.driver)
+        LG = LoginPage(self.driver)
         LA.login(Username=Account["账号"], Password=Account["密码"])
         time.sleep(1)
 
@@ -73,7 +75,12 @@ class Login_test(unittest.TestCase):
         Account['执行时间'] = datetime.datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
 
         try:
+            if(Account['验证界面包含的关键字']!='收件箱'):
+                LG.SwitchToSelectFrame()
+                time.sleep(2)
             assert Account['验证界面包含的关键字'] in self.driver.page_source
+            if(Account['验证界面包含的关键字']!='收件箱'):
+                LG.SwitchToDefaultFrame()
         except Exception as error: 
             Account['测试结果'] = False
             LoginExcel.saveSheet(Account)
